@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="Untitledci.css">
+  <!--define um título para o documento-->
+  <title>CONTOS INFANTIS</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-primary">
+    <!--hiperligação para a página inicial-->
+    <div class="container d-flex justify-content-center"> <a class="navbar-brand" href="AuroraP.html">
+        <i class="fa fa-heart" id="contos"></i>
+        <b><b>A AURORA CONTA HISTÓRIAS</b></b>
+      </a> </div>
+  </nav>
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 order-2 order-lg-1"> <img class="img-fluid d-block px-5 mx-5" src="img/3-5.jpg" style=""> </div>
+        <div class="px-5 col-lg-6 d-flex flex-column align-items-start justify-content-center order-1 order-lg-2">
+          <h1 class="text-primary" style="	transform: scale(2);	text-shadow: 0px 0px 2px black;"><b>CONTOS INFANTIS</b></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--botão com ligação para aparecimento de pop up de livro e video-->
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" style=""><img class="img-fluid d-block" src="img/ct.png"><button id="btn" class="btn btn-primary mx-5 btn-sm" onclick="showPdf('pdf/tam.pdf')"><i class="fa fa-book fa-2x"></i></button><button class="btn btn-primary btn-sm" onclick="showVideo('https://www.youtube.com/embed/3FOrJB-dAD0')"><i class="fa fa-video-camera fa-2x"></i></button></div>
+        <div class="col-md-4"><img class="img-fluid d-block" src="img/CC.png"><button id="btn" class="btn btn-primary mx-5 btn-sm" onclick="showPdf('pdf/maria.pdf')"><i class="fa fa-book fa-2x"></i></button><button class="btn btn-primary btn-sm" onclick="showVideo('https://www.youtube.com/embed/oa9iJI9WMVU')"><i class="fa fa-video-camera fa-2x"></i></button></div>
+        <div class="col-md-4"><img class="img-fluid d-block" src="img/c1.png"><button id="btn" class="btn btn-primary mx-5 btn-sm" onclick="showPdf('pdf/capuchinho.pdf')"><i class="fa fa-book fa-2x"></i></button><button class="btn btn-primary btn-sm" onclick="showVideo('https://www.youtube.com/embed/GsSWoB6uCb4')"><i class="fa fa-video-camera fa-2x"></i></button></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img-fluid d-block rounded mx-3" src="img/c3.png"><button id="btn" class="btn btn-primary mx-5 btn-sm" onclick="showPdf('pdf/carocinha.pdf')"><i class="fa fa-book fa-2x"></i></button><button class="btn btn-primary btn-sm" onclick="showVideo('https://www.youtube.com/embed/G8dJrF-aVCo')"><i class="fa fa-video-camera fa-2x"></i></button>
+        </div>
+        <div class="col-md-4">
+          <img class="img-fluid d-block rounded" src="img/C.png"><button id="btn" class="btn btn-primary mx-5 btn-sm" onclick="showPdf('')"><i class="fa fa-book fa-2x"></i></button><button class="btn btn-primary btn-sm" onclick="showVideo('')"><i class="fa fa-video-camera fa-2x"></i></button>
+        </div>
+        <div class="col-md-4" style="">
+          <img class="img-fluid d-block rounded" src="img/C.png"><a class="btn btn-primary mx-5 btn-sm" href="#"><i class="fa fa-book fa-2x"></i></a><a class="btn btn-primary btn-sm" href="#"><i class="fa fa-video-camera fa-2x"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <!--botão para voltar ao inicio da página-->
+        <div class="col-md-12 text-center d-md-flex justify-content-between align-items-center">
+          <a class="btn btn-primary" href="#contos">CONTOS INFANTIS (VOLTAR AO TOPO)</a> </div>
+      </div>
+    </div>
+  </div>
+  <!--chamar funções para aparecimento das pop up livro e video+ configurações-->
+  <script src="hf.js"></script>
+  <dialog id="dlgVideo">
+    <p></p>
+    <iframe id="ifrVideo" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    <p></p>
+    <p class="text-center"><button onclick="closeVideo()" class="btn btn-danger btn-sm">FECHAR</button></p>
+  </dialog>
+  <dialog id="dlgPdf">
+    <p>
+      <object id="objPdf" width="800" height="800" data="">
+      </object>
+    </p>
+    <p class="text-center"><button onclick="closePdf()" class="btn btn-danger btn-sm">FECHAR</button></p>
+  </dialog>
+  <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
